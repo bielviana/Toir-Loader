@@ -1,0 +1,16 @@
+{
+    "QMainWindow":[
+        {
+            "frameless": true,
+            "transluscentBg": true,
+            "navigation":[
+                {
+                    "minimize": "minimizeBtn",
+                    "close": "closeBtn",
+                    "moveWindow": "titleBar",
+                    "tittleBar": "titleBar"
+                }
+            ]
+        }
+    ]
+}
