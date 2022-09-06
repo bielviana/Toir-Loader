@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # GUI files
-.ui
-.qrc
+# .ui
+# .qrc
