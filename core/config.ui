@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>940</width>
+    <height>740</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>940</width>
+    <height>740</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Config</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#configShadow {
+	background-image: url(:/images/images/configShadow.png);
+}
+
+#centralwidget #widget {
+	background-color: #212121;
+	border-radius: 10px;
+}
+
+#configBody {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#sidebar {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#sidebar QPushButton {
+	color: #ffffff;
+	background-color: transparent;
+	border-radius: 5px;
+	border: none;
+}
+#sidebar QPushButton:hover {
+	color: #ffffff;
+	background-color: #313131;
+	border-radius: 5px;
+	border: none;
+}
+
+#configFrame QLabel {
+	color: #ffffff;
+}
+
+#configFrame #tab1{
+	background-color: transparent;
+	border: none;
+}
+
+#searchConfigFrame {
+	background-color: #ffffff;
+	border: 2px solid #d400ff;
+	border-radius: 5px;
+}
+
+#searchConfigBtn {
+	image: url(:/purpleIcons/images/purpleIcons/search.svg);
+	border: none;
+	padding-top: 2px;
+	padding-bottom: 6px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#searchConfigBtn:hover {
+	image: url(:/whiteIcons/images/whiteIcons/search.svg);
+	background-color: #d400ff;
+	border: none;
+}
+#searchConfigBtn:pressed {
+	image: url(:/purpleIcons/images/purpleIcons/search.svg);
+	background-color: #212121;
+	border-left: 2px solid #d400ff;
+	border-bottom: 4px solid #d400ff;
+}
+
+#searchConfigInput {
+	color: #212121;
+	background-color: transparent;
+	border: none;
+	border-radius: 5px;
+}
+
+#searchFileFrame {
+	background-color: #ffffff;
+	border: 2px solid #d400ff;
+	border-radius: 5px;
+}
+
+#searchFileBtn {
+	image: url(:/purpleIcons/images/purpleIcons/search.svg);
+	border: none;
+	padding-top: 2px;
+	padding-bottom: 6px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#searchFileBtn:hover {
+	image: url(:/whiteIcons/images/whiteIcons/search.svg);
+	background-color: #d400ff;
+	border: none;
+}
+#searchFileBtn:pressed {
+	image: url(:/purpleIcons/images/purpleIcons/search.svg);
+	background-color: #212121;
+	border-left: 2px solid #d400ff;
+	border-bottom: 4px solid #d400ff;
+}
+
+#searchFileInput {
+	color: #212121;
+	background-color: transparent;
+	border: none;
+	border-radius: 5px;
+}
+
+#searchAS1Frame {
+	background-color: #ffffff;
+	border: 2px solid #d400ff;
+	border-radius: 5px;
+}
+
+#searchAS1Btn {
+	image: url(:/purpleIcons/images/purpleIcons/search.svg);
+	border: none;
+	padding-top: 2px;
+	padding-bottom: 6px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#searchAS1Btn:hover {
+	image: url(:/whiteIcons/images/whiteIcons/search.svg);
+	background-color: #d400ff;
+	border: none;
+}
+#searchAS1Btn:pressed {
+	image: url(:/purpleIcons/images/purpleIcons/search.svg);
+	background-color: #212121;
+	border-left: 2px solid #d400ff;
+	border-bottom: 4px solid #d400ff;
+}
+
+#searchAS1Input {
+	color: #212121;
+	background-color: transparent;
+	border: none;
+	border-radius: 5px;
+}
+
+#configFrame #tab2 {
+	background-color: transparent;
+	border: none;
+}
+
+#saveBtn {
+	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));
+	border-radius: 5px;
+	color: #212121;
+}
+#saveBtn:hover {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));
+	border: 2px solid #d400ff;
+	color: #d400ff;
+}
+#saveBtn:pressed {
+	background-color: #212121;
+	border: 2px solid #d400ff;
+	color: #d400ff;
+}
+
+#cancelBtn {
+	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));
+	border-radius: 5px;
+	color: #212121;
+}
+#cancelBtn:hover {
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));
+	border: 2px solid #d400ff;
+	color: #d400ff;
+}
+#cancelBtn:pressed {
+	background-color: #212121;
+	border: 2px solid #d400ff;
+	color: #d400ff;
+}
+
+#titleBar QPushButton {
+	background-color: transparent;
+	border: 0;
+}
+
+#titleBar {
+	background-color: #313131;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#closeBtn {
+	image: url(:/purpleIcons/images/purpleIcons/x.svg);
+}
+#closeBtn:hover {
+	image: url(:/whiteIcons/images/whiteIcons/x.svg);
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>900</width>
+      <height>700</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>900</width>
+      <height>700</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>900</width>
+      <height>700</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="titleBar">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../resources/res.qrc">:/purpleIcons/images/purpleIcons/settings.svg</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::LinksAccessibleByMouse</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="tileTitle">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>90</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#ffffff;&quot;&gt;Configuration&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::LinksAccessibleByMouse</set>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignRight|Qt::AlignVCenter">
+         <widget class="QFrame" name="frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="configBtn">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>18</width>
+               <height>18</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="minimizeBtn">
+             <property name="minimumSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="closeBtn">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="body" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item alignment="Qt::AlignTop">
+         <widget class="QFrame" name="sidebar">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="generalBtn">
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>General</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line">
+             <property name="styleSheet">
+              <string notr="true">background-color: #313131;</string>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="profilesBtn">
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Profiles</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="separator">
+          <property name="styleSheet">
+           <string notr="true">background-color: #313131;</string>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="midLineWidth">
+           <number>0</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="configBody">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="configFrame">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>600</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>600</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <property name="lineWidth">
+              <number>0</number>
+             </property>
+             <widget class="QFrame" name="tab1">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>657</width>
+                <height>600</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>657</width>
+                <height>600</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>657</width>
+                <height>600</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <property name="spacing">
+                <number>20</number>
+               </property>
+               <property name="leftMargin">
+                <number>20</number>
+               </property>
+               <property name="topMargin">
+                <number>20</number>
+               </property>
+               <property name="rightMargin">
+                <number>20</number>
+               </property>
+               <property name="bottomMargin">
+                <number>20</number>
+               </property>
+               <item alignment="Qt::AlignTop">
+                <widget class="QFrame" name="tab1_top_frame">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_7">
+                  <property name="spacing">
+                   <number>20</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QWidget" name="tab1_line1" native="true">
+                    <layout class="QVBoxLayout" name="verticalLayout_8">
+                     <property name="spacing">
+                      <number>5</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="searchFileLabel">
+                       <property name="font">
+                        <font>
+                         <pointsize>14</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Toir Executable:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="searchFileFrame">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <property name="lineWidth">
+                        <number>0</number>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_5">
+                        <property name="spacing">
+                         <number>5</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QLineEdit" name="searchFileInput">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>40</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                           </font>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Click on the search icon and select the Toir executable...</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="searchFileBtn">
+                          <property name="minimumSize">
+                           <size>
+                            <width>40</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>40</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="tab1_line4" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_6">
+                     <property name="spacing">
+                      <number>5</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item alignment="Qt::AlignLeft">
+                      <widget class="QLabel" name="customConfigLabel">
+                       <property name="font">
+                        <font>
+                         <pointsize>14</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Use custom profile:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item alignment="Qt::AlignLeft">
+                      <widget class="QCheckBox" name="customConfigCheckBox">
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="checked">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QWidget" name="tab1_line2" native="true">
+                    <layout class="QVBoxLayout" name="verticalLayout_9">
+                     <property name="spacing">
+                      <number>5</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="searchConfigLabel">
+                       <property name="font">
+                        <font>
+                         <pointsize>14</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Custom Config File:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="searchConfigFrame">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <property name="lineWidth">
+                        <number>0</number>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_8">
+                        <property name="spacing">
+                         <number>5</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QLineEdit" name="searchConfigInput">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>40</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                           </font>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Click on the search icon and select the custom config file...</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="searchConfigBtn">
+                          <property name="minimumSize">
+                           <size>
+                            <width>40</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>40</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="tab1_line3" native="true">
+                    <layout class="QVBoxLayout" name="verticalLayout_11">
+                     <property name="spacing">
+                      <number>5</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="searchAS1Label">
+                       <property name="font">
+                        <font>
+                         <pointsize>14</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Toir config path (Example: C:\Program Files\AS1...config):</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="searchAS1Frame">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <property name="lineWidth">
+                        <number>0</number>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_10">
+                        <property name="spacing">
+                         <number>5</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QLineEdit" name="searchAS1Input">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>40</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                           </font>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Click on the search icon and select the custom config file...</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="searchAS1Btn">
+                          <property name="minimumSize">
+                           <size>
+                            <width>40</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>40</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignBottom">
+                <widget class="QFrame" name="tab1_bottom_frame">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QFrame" name="tab2">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>657</width>
+                <height>600</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>657</width>
+                <height>600</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>657</width>
+                <height>600</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <property name="spacing">
+                <number>20</number>
+               </property>
+               <property name="leftMargin">
+                <number>20</number>
+               </property>
+               <property name="topMargin">
+                <number>20</number>
+               </property>
+               <property name="rightMargin">
+                <number>20</number>
+               </property>
+               <property name="bottomMargin">
+                <number>20</number>
+               </property>
+               <item alignment="Qt::AlignTop">
+                <widget class="QLabel" name="label_2">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="lineWidth">
+                  <number>0</number>
+                 </property>
+                 <property name="text">
+                  <string>Coming soon...</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <zorder>tab2</zorder>
+             <zorder>tab1</zorder>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight|Qt::AlignBottom">
+            <widget class="QFrame" name="configBtns">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="saveBtn">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>MS Shell Dlg 2</family>
+                  <pointsize>14</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Save</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="cancelBtn">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Cancel</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="configShadow">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>940</width>
+      <height>740</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <zorder>configShadow</zorder>
+   <zorder>widget</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

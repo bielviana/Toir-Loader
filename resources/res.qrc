@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="images">
+    <file>images/configShadow.png</file>
     <file>images/afk.png</file>
     <file>images/icon.ico</file>
     <file>images/off.png</file>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfaceDOxjXN.ui'
+## Form generated from reading UI file 'interfaceGOhifo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -308,7 +308,7 @@ class Ui_MainWindow(object):
         self.configBtn.setText("")
         self.minimizeBtn.setText("")
         self.closeBtn.setText("")
-        self.statusLabel.setText(QCoreApplication.translate("MainWindow", u"Toir Infinity is not open!", None))
+        self.statusLabel.setText(QCoreApplication.translate("MainWindow", u"Toir is not open!", None))
         self.loadBtn.setText(QCoreApplication.translate("MainWindow", u"LOAD", None))
         self.discBtn.setText(QCoreApplication.translate("MainWindow", u"Y", None))
         self.ttBtn.setText(QCoreApplication.translate("MainWindow", u"D", None))

@@ -410,7 +410,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Toir Infinity is not open!</string>
+           <string>Toir is not open!</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>

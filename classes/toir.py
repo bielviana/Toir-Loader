@@ -6,7 +6,7 @@ class Toir():
         pass
 
     def load(self):
-        toirPath = "C:\TOIR_INFINITY_12.16.1.1\TOIR_INFINITY.exe"
+        toirPath = 'C:\TOIR_INFINITY_12.16.1.1\TOIR_INFINITY.exe'
         thread = Th(1, toirPath)
         thread.start()
 
