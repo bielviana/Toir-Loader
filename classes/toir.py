@@ -1,13 +1,16 @@
 from threading import Thread
 import subprocess as sp
+import json
+from os import path
 
 class Toir():
     def __init__(self):
-        pass
+        with open('config.json', 'r') as file:
+            config = json.load(file)
+        self.toirExePath = config['general'][0]['toirExe']
 
     def load(self):
-        toirPath = 'C:\TOIR_INFINITY_12.16.1.1\TOIR_INFINITY.exe'
-        thread = Th(1, toirPath)
+        thread = Th(1, self.toirExePath)
         thread.start()
 
 class Th(Thread):

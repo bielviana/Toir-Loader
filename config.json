@@ -2,7 +2,9 @@
     "general": [
         {
             "toirExe": "C:\\lol\\TOIR_INFINITY.exe",
-            "configFile": ""
+            "useCustomConfig": true,
+            "configFile": "C:\\lol\\Tools\\AutoLoLs.ini",
+            "configPath": "C:\\Program Files\\AS1\\DDD861CA26FE5F5F9F4BD2A165A82B2E\\config"
         }
     ],
     "profiles": []

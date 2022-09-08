@@ -68,7 +68,7 @@
 }
 
 #searchConfigFrame {
-	background-color: #ffffff;
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));
 	border: 2px solid #d400ff;
 	border-radius: 5px;
 }
@@ -101,7 +101,7 @@
 }
 
 #searchFileFrame {
-	background-color: #ffffff;
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));
 	border: 2px solid #d400ff;
 	border-radius: 5px;
 }
@@ -134,7 +134,7 @@
 }
 
 #searchAS1Frame {
-	background-color: #ffffff;
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));
 	border: 2px solid #d400ff;
 	border-radius: 5px;
 }
@@ -166,41 +166,43 @@
 	border-radius: 5px;
 }
 
+#useCCBtn {
+	background-color: #212121;
+	color: #d400ff;
+	border: 2px solid #d400ff;
+	border-radius: 5px;
+}
+
+#useCCBtn:hover {
+	background-color: #313131;
+}
+
+#useCCBtn:pressed {
+	background-color: #212121;
+	color: #313131;
+	border: 2px solid #313131;
+}
+
 #configFrame #tab2 {
 	background-color: transparent;
 	border: none;
 }
 
-#saveBtn {
-	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));
-	border-radius: 5px;
-	color: #212121;
-}
-#saveBtn:hover {
-	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));
-	border: 2px solid #d400ff;
-	color: #d400ff;
-}
-#saveBtn:pressed {
+#configBtns QPushButton {
 	background-color: #212121;
-	border: 2px solid #d400ff;
 	color: #d400ff;
-}
-
-#cancelBtn {
-	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));
+	border: 2px solid #d400ff;
 	border-radius: 5px;
-	color: #212121;
 }
-#cancelBtn:hover {
-	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));
-	border: 2px solid #d400ff;
-	color: #d400ff;
+#configBtns QPushButton:hover {
+	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));
+	color: #ffffff;
+	border: 2px solid #ffffff;
 }
-#cancelBtn:pressed {
+#configBtns QPushButton:pressed {
 	background-color: #212121;
-	border: 2px solid #d400ff;
-	color: #d400ff;
+	color: #313131;
+	border: 2px solid #313131;
 }
 
 #titleBar QPushButton {
@@ -846,7 +848,7 @@
                     </layout>
                    </widget>
                   </item>
-                  <item>
+                  <item alignment="Qt::AlignLeft">
                    <widget class="QWidget" name="tab1_line4" native="true">
                     <layout class="QHBoxLayout" name="horizontalLayout_6">
                      <property name="spacing">
@@ -864,25 +866,27 @@
                      <property name="bottomMargin">
                       <number>0</number>
                      </property>
-                     <item alignment="Qt::AlignLeft">
-                      <widget class="QLabel" name="customConfigLabel">
+                     <item>
+                      <widget class="QPushButton" name="useCCBtn">
+                       <property name="minimumSize">
+                        <size>
+                         <width>220</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>200</width>
+                         <height>40</height>
+                        </size>
+                       </property>
                        <property name="font">
                         <font>
                          <pointsize>14</pointsize>
                         </font>
                        </property>
                        <property name="text">
-                        <string>Use custom profile:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item alignment="Qt::AlignLeft">
-                      <widget class="QCheckBox" name="customConfigCheckBox">
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="checked">
-                        <bool>true</bool>
+                        <string>Use Custom Config</string>
                        </property>
                       </widget>
                      </item>

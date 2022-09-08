@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfaceGOhifo.ui'
+## Form generated from reading UI file 'interfaceVPQyRH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -22,6 +22,7 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QSize(368, 238))
         MainWindow.setMaximumSize(QSize(368, 238))
         font = QFont()
+        font.setPointSize(24)
         font.setBold(False)
         font.setWeight(50)
         MainWindow.setFont(font)
@@ -40,32 +41,36 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "#loadBtn {\n"
-"	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));\n"
-"	border-radius: 5px;\n"
-"	color: #212121;\n"
-"}\n"
-"#loadBtn:hover {\n"
-"	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));\n"
-"	border: 2px solid #d400ff;\n"
+"	background-color: #212121;\n"
 "	color: #d400ff;\n"
+"	border: 2px solid #d400ff;\n"
+"	border-radius: 5px;\n"
 "}\n"
+"\n"
+"#loadBtn:hover {\n"
+"	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));\n"
+"	color: #ffffff;\n"
+"	border: 2px solid #ffffff;\n"
+"}\n"
+"\n"
 "#loadBtn:pressed {\n"
 "	background-color: #212121;\n"
-"	border: 2px solid #d400ff;\n"
-"	color: #d400ff;\n"
+"	color: #313131;\n"
+"	border: 2px solid #313131;\n"
 "}\n"
 "\n"
 "#footer QPushButton {\n"
-"	color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));\n"
-"	background-color: #212121;\n"
-"	border-"
-                        "radius: 18px;\n"
+"	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));\n"
+"	color: #212121;\n"
+"	border-radius: 18px;\n"
 "}\n"
 "#footer QPushButton:hover {\n"
-"	color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));\n"
-"	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));\n"
+"	color: qlinearg"
+                        "radient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));\n"
+"	background-color: #ffffff;\n"
 "}\n"
 "#footer QPushButton:pressed {\n"
+"	background-color: #313131;\n"
 "	color: #212121;\n"
 "}\n"
 "\n"
@@ -96,14 +101,14 @@ class Ui_MainWindow(object):
 "}\n"
 "#minimizeBtn:hover {\n"
 "	image: url(:/whiteIcons/images/whiteIcons/minimize-2.svg);\n"
-""
-                        "}\n"
+"}\n"
 "\n"
 "#configBtn {\n"
 "	image: url(:/purpleIcons/images/purpleIcons/settings.svg);\n"
 "}\n"
 "#configBtn:hover {\n"
-"	image: url(:/whiteIcons/images/whiteIcons/settings.svg);\n"
+"	image: url(:/whiteIcons/image"
+                        "s/whiteIcons/settings.svg);\n"
 "}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -144,7 +149,10 @@ class Ui_MainWindow(object):
         self.tileTitle.setObjectName(u"tileTitle")
         self.tileTitle.setEnabled(False)
         self.tileTitle.setMaximumSize(QSize(75, 16777215))
-        self.tileTitle.setFont(font)
+        font1 = QFont()
+        font1.setBold(False)
+        font1.setWeight(50)
+        self.tileTitle.setFont(font1)
         self.tileTitle.setScaledContents(True)
         self.tileTitle.setTextInteractionFlags(Qt.LinksAccessibleByMouse)
 
@@ -182,9 +190,9 @@ class Ui_MainWindow(object):
         self.closeBtn.setObjectName(u"closeBtn")
         self.closeBtn.setMinimumSize(QSize(0, 20))
         self.closeBtn.setMaximumSize(QSize(200, 20))
-        font1 = QFont()
-        font1.setPointSize(8)
-        self.closeBtn.setFont(font1)
+        font2 = QFont()
+        font2.setPointSize(8)
+        self.closeBtn.setFont(font2)
         self.closeBtn.setIconSize(QSize(24, 24))
         self.closeBtn.setAutoDefault(False)
         self.closeBtn.setFlat(False)
@@ -204,12 +212,12 @@ class Ui_MainWindow(object):
         self.statusLabel.setObjectName(u"statusLabel")
         self.statusLabel.setMinimumSize(QSize(0, 0))
         self.statusLabel.setMaximumSize(QSize(280, 30))
-        font2 = QFont()
-        font2.setFamily(u"Calibri")
-        font2.setPointSize(14)
-        font2.setBold(False)
-        font2.setWeight(50)
-        self.statusLabel.setFont(font2)
+        font3 = QFont()
+        font3.setFamily(u"Calibri")
+        font3.setPointSize(14)
+        font3.setBold(False)
+        font3.setWeight(50)
+        self.statusLabel.setFont(font3)
         self.statusLabel.setAlignment(Qt.AlignCenter)
         self.statusLabel.setTextInteractionFlags(Qt.NoTextInteraction)
 
@@ -225,12 +233,12 @@ class Ui_MainWindow(object):
         self.loadBtn.setObjectName(u"loadBtn")
         self.loadBtn.setMinimumSize(QSize(170, 40))
         self.loadBtn.setMaximumSize(QSize(170, 40))
-        font3 = QFont()
-        font3.setFamily(u"Calibri")
-        font3.setPointSize(24)
-        font3.setBold(True)
-        font3.setWeight(75)
-        self.loadBtn.setFont(font3)
+        font4 = QFont()
+        font4.setFamily(u"Calibri")
+        font4.setPointSize(24)
+        font4.setBold(True)
+        font4.setWeight(75)
+        self.loadBtn.setFont(font4)
 
         self.body.addWidget(self.loadBtn, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
@@ -252,10 +260,10 @@ class Ui_MainWindow(object):
         self.discBtn.setObjectName(u"discBtn")
         self.discBtn.setMinimumSize(QSize(36, 36))
         self.discBtn.setMaximumSize(QSize(36, 36))
-        font4 = QFont()
-        font4.setFamily(u"Social Media Circled")
-        font4.setPointSize(24)
-        self.discBtn.setFont(font4)
+        font5 = QFont()
+        font5.setFamily(u"Social Media Circled")
+        font5.setPointSize(24)
+        self.discBtn.setFont(font5)
 
         self.footerLinks.addWidget(self.discBtn, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
@@ -263,7 +271,7 @@ class Ui_MainWindow(object):
         self.ttBtn.setObjectName(u"ttBtn")
         self.ttBtn.setMinimumSize(QSize(36, 36))
         self.ttBtn.setMaximumSize(QSize(36, 36))
-        self.ttBtn.setFont(font4)
+        self.ttBtn.setFont(font5)
 
         self.footerLinks.addWidget(self.ttBtn, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
@@ -271,7 +279,7 @@ class Ui_MainWindow(object):
         self.gitBtn.setObjectName(u"gitBtn")
         self.gitBtn.setMinimumSize(QSize(36, 36))
         self.gitBtn.setMaximumSize(QSize(36, 36))
-        self.gitBtn.setFont(font4)
+        self.gitBtn.setFont(font5)
 
         self.footerLinks.addWidget(self.gitBtn, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
@@ -279,7 +287,7 @@ class Ui_MainWindow(object):
         self.ppBtn.setObjectName(u"ppBtn")
         self.ppBtn.setMinimumSize(QSize(36, 36))
         self.ppBtn.setMaximumSize(QSize(36, 36))
-        self.ppBtn.setFont(font4)
+        self.ppBtn.setFont(font5)
 
         self.footerLinks.addWidget(self.ppBtn, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 

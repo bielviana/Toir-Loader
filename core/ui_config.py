@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'configEGPsoN.ui'
+## Form generated from reading UI file 'config.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -63,15 +63,15 @@ class Ui_ConfigWindow(object):
 "}\n"
 "\n"
 "#searchConfigFrame {\n"
-"	background-color: #ffffff;\n"
+"	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));\n"
 "	border: 2px solid #d400ff;\n"
-"	border-radius: 5px;\n"
+"	bord"
+                        "er-radius: 5px;\n"
 "}\n"
 "\n"
 "#searchConfigBtn {\n"
 "	image: url(:/purpleIcons/images/purpleIcons/search.svg);\n"
-""
-                        "	border: none;\n"
+"	border: none;\n"
 "	padding-top: 2px;\n"
 "	padding-bottom: 6px;\n"
 "	padding-right: 5px;\n"
@@ -97,13 +97,14 @@ class Ui_ConfigWindow(object):
 "}\n"
 "\n"
 "#searchFileFrame {\n"
-"	background-color: #ffffff;\n"
+"	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));\n"
 "	border: 2px solid #d400ff;\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "#searchFileBtn {\n"
-"	image: url(:/purpleIcons/images/purpleIcons/search.svg);\n"
+"	image: url(:/purpleIcons/images/"
+                        "purpleIcons/search.svg);\n"
 "	border: none;\n"
 "	padding-top: 2px;\n"
 "	padding-bottom: 6px;\n"
@@ -111,8 +112,7 @@ class Ui_ConfigWindow(object):
 "	padding-left: 5px;\n"
 "}\n"
 "#searchFileBtn:hover {\n"
-"	image: url(:/whiteIcons/images/whiteIcons/search.s"
-                        "vg);\n"
+"	image: url(:/whiteIcons/images/whiteIcons/search.svg);\n"
 "	background-color: #d400ff;\n"
 "	border: none;\n"
 "}\n"
@@ -131,7 +131,7 @@ class Ui_ConfigWindow(object):
 "}\n"
 "\n"
 "#searchAS1Frame {\n"
-"	background-color: #ffffff;\n"
+"	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));\n"
 "	border: 2px solid #d400ff;\n"
 "	border-radius: 5px;\n"
 "}\n"
@@ -141,7 +141,8 @@ class Ui_ConfigWindow(object):
 "	border: none;\n"
 "	padding-top: 2px;\n"
 "	padding-bottom: 6px;\n"
-"	padding-right: 5px;\n"
+""
+                        "	padding-right: 5px;\n"
 "	padding-left: 5px;\n"
 "}\n"
 "#searchAS1Btn:hover {\n"
@@ -152,8 +153,7 @@ class Ui_ConfigWindow(object):
 "#searchAS1Btn:pressed {\n"
 "	image: url(:/purpleIcons/images/purpleIcons/search.svg);\n"
 "	background-color: #212121;\n"
-"	border-left: 2px soli"
-                        "d #d400ff;\n"
+"	border-left: 2px solid #d400ff;\n"
 "	border-bottom: 4px solid #d400ff;\n"
 "}\n"
 "\n"
@@ -164,42 +164,44 @@ class Ui_ConfigWindow(object):
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
+"#useCCBtn {\n"
+"	background-color: #212121;\n"
+"	color: #d400ff;\n"
+"	border: 2px solid #d400ff;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"#useCCBtn:hover {\n"
+"	background-color: #313131;\n"
+"}\n"
+"\n"
+"#useCCBtn:pressed {\n"
+"	background-color: #212121;\n"
+"	color: #313131;\n"
+"	border: 2px solid #313131;\n"
+"}\n"
+"\n"
 "#configFrame #tab2 {\n"
 "	background-color: transparent;\n"
 "	border: none;\n"
 "}\n"
 "\n"
-"#saveBtn {\n"
-"	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));\n"
+"#configBtns QPushButton {\n"
+"	background-color: #212121;\n"
+"	color: #"
+                        "d400ff;\n"
+"	border: 2px solid #d400ff;\n"
 "	border-radius: 5px;\n"
-"	color: #212121;\n"
 "}\n"
-"#saveBtn:hover {\n"
-"	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));\n"
-"	border: 2px solid #d400ff;\n"
-"	color: #d400ff;\n"
-"}\n"
-"#saveBtn:pressed {\n"
-"	background-color: #212121;\n"
-"	border: 2px solid #d400ff;\n"
-"	color: #d400ff;\n"
-"}\n"
-"\n"
-"#cancelBtn {\n"
+"#configBtns QPushButton:hover {\n"
 "	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));\n"
-"	border-radius"
-                        ": 5px;\n"
-"	color: #212121;\n"
+"	color: #ffffff;\n"
+"	border: 2px solid #ffffff;\n"
 "}\n"
-"#cancelBtn:hover {\n"
-"	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));\n"
-"	border: 2px solid #d400ff;\n"
-"	color: #d400ff;\n"
-"}\n"
-"#cancelBtn:pressed {\n"
+"#configBtns QPushButton:pressed {\n"
 "	background-color: #212121;\n"
-"	border: 2px solid #d400ff;\n"
-"	color: #d400ff;\n"
+"	color: #313131;\n"
+"	border: 2px solid #313131;\n"
 "}\n"
 "\n"
 "#titleBar QPushButton {\n"
@@ -453,20 +455,16 @@ class Ui_ConfigWindow(object):
         self.horizontalLayout_6.setSpacing(5)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.customConfigLabel = QLabel(self.tab1_line4)
-        self.customConfigLabel.setObjectName(u"customConfigLabel")
-        self.customConfigLabel.setFont(font2)
+        self.useCCBtn = QPushButton(self.tab1_line4)
+        self.useCCBtn.setObjectName(u"useCCBtn")
+        self.useCCBtn.setMinimumSize(QSize(220, 40))
+        self.useCCBtn.setMaximumSize(QSize(200, 40))
+        self.useCCBtn.setFont(font2)
 
-        self.horizontalLayout_6.addWidget(self.customConfigLabel, 0, Qt.AlignLeft)
-
-        self.customConfigCheckBox = QCheckBox(self.tab1_line4)
-        self.customConfigCheckBox.setObjectName(u"customConfigCheckBox")
-        self.customConfigCheckBox.setChecked(True)
-
-        self.horizontalLayout_6.addWidget(self.customConfigCheckBox, 0, Qt.AlignLeft)
+        self.horizontalLayout_6.addWidget(self.useCCBtn)
 
 
-        self.verticalLayout_7.addWidget(self.tab1_line4)
+        self.verticalLayout_7.addWidget(self.tab1_line4, 0, Qt.AlignLeft)
 
         self.tab1_line2 = QWidget(self.tab1_top_frame)
         self.tab1_line2.setObjectName(u"tab1_line2")
@@ -665,8 +663,7 @@ class Ui_ConfigWindow(object):
         self.searchFileLabel.setText(QCoreApplication.translate("MainWindow", u"Toir Executable:", None))
         self.searchFileInput.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Click on the search icon and select the Toir executable...", None))
         self.searchFileBtn.setText("")
-        self.customConfigLabel.setText(QCoreApplication.translate("MainWindow", u"Use custom profile:", None))
-        self.customConfigCheckBox.setText("")
+        self.useCCBtn.setText(QCoreApplication.translate("MainWindow", u"Use Custom Config", None))
         self.searchConfigLabel.setText(QCoreApplication.translate("MainWindow", u"Custom Config File:", None))
         self.searchConfigInput.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Click on the search icon and select the custom config file...", None))
         self.searchConfigBtn.setText("")

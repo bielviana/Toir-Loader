@@ -21,22 +21,19 @@ class MainWindow(QMainWindow):
         })
         self.show()
 
+        self.configWindow = ConfigWindow()
+
         if p.isfile('config.json') == False:
             with open ('config.json', 'w') as file:
                 config = {}
                 config['general'] = [1]
-                config['general'][0] = {"toirExe": "", "configFile": ""}
+                config['general'][0] = {"toirExe": "", "useCustomConfig": False, "configFile": "", "configPath": ""}
                 config['profiles'] = []
                 json.dump(config, file, indent=4)
-            self.configWindow = ConfigWindow()
             self.configWindow.show()
 
         # EVENT TO OPEN THE CONFIG WINDOW
-        try:
-            self.ui.configBtn.clicked.connect(self.configWindow.show)
-        except:
-            self.configWindow = ConfigWindow()
-            self.ui.configBtn.clicked.connect(self.configWindow.show)
+        self.ui.configBtn.clicked.connect(self.configWindow.show)
                 
         # EVENT TO LOAD THE TOIR INFINITY/ALPHA
         self.toir = Toir()
@@ -67,16 +64,39 @@ class ConfigWindow(QMainWindow):
                 config['general'][0]['toirExe'] = ""
                 json.dump(config, file, indent=4)
 
+        if config['general'][0]['useCustomConfig'] == None:
+            with open('config.json', 'w') as file:
+                config['general'][0]['useCustomConfig'] = False
+                json.dump(config, file, indent=4)
+
         if config['general'][0]['configFile'] == None:
             with open('config.json', 'w') as file:
                 config['general'][0]['configFile'] = ""
                 json.dump(config, file, indent=4)
 
+        if config['general'][0]['configPath'] == None:
+            with open('config.json', 'w') as file:
+                config['general'][0]['configPath'] = ""
+                json.dump(config, file, indent=4)
+        
         self.ui.searchFileInput.setText(config['general'][0]['toirExe'])
-        self.ui.searchConfigInput.setText(config['general'][0]['configFile'])
-
         self.toirExe = self.ui.searchFileInput.text()
         self.configFile = self.ui.searchConfigInput.text()
+        self.configPath = self.ui.searchAS1Input.text()
+        self.useCustomConfig = config['general'][0]['useCustomConfig']
+
+        if config['general'][0]['useCustomConfig'] == True:
+            self.ui.useCCBtn.setText("Don't Use Custom Config")
+            self.ui.tab1_line2.setHidden(False)
+            self.ui.tab1_line3.setHidden(False)
+            self.ui.searchConfigInput.setText(config['general'][0]['configFile'])
+            self.ui.searchAS1Input.setText(config['general'][0]['configPath'])
+        elif config['general'][0]['useCustomConfig'] == False:
+            self.ui.useCCBtn.setText("Use Custom Config")
+            self.ui.tab1_line2.setHidden(True)
+            self.ui.tab1_line3.setHidden(True)
+            self.ui.searchConfigInput.setText('')
+            self.ui.searchAS1Input.setText('')
 
         # ALTERNATE INTO THE CONFIG TABS
         self.ui.tab2.setHidden(True)
@@ -90,61 +110,94 @@ class ConfigWindow(QMainWindow):
         # GENERAL CONFIGS
         self.generalConfig = GeneralConfig()
         self.ui.searchFileBtn.clicked.connect(lambda: self.updateGeneralConfig('toirExe'))
+        self.ui.useCCBtn.clicked.connect(lambda: self.updateGeneralConfig('useCustomConfig'))
         self.ui.searchConfigBtn.clicked.connect(lambda: self.updateGeneralConfig('configFile'))
+        self.ui.searchAS1Btn.clicked.connect(lambda: self.updateGeneralConfig('configPath'))
 
         # SAVE OR CANCEL THE CONFIG CHANGES
         self.ui.saveBtn.clicked.connect(self.saveConfig)
         self.ui.cancelBtn.clicked.connect(self.close)
 
     def updateGeneralConfig(self, type):
-        self.filePath = self.generalConfig.searchFile(type)
-
         if type == 'toirExe':
-            self.ui.searchFileInput.setText(self.filePath)
+            self.ui.searchFileInput.setText(self.generalConfig.searchFile(type))
             self.toirExe = self.ui.searchFileInput.text()
-        if type == 'configFile':
-            self.ui.searchConfigInput.setText(self.filePath)
+        elif type == 'configFile':
+            self.ui.searchConfigInput.setText(self.generalConfig.searchFile(type))
             self.configFile = self.ui.searchConfigInput.text()
+        elif type == 'configPath':
+            self.ui.searchAS1Input.setText(self.generalConfig.searchFolder(type))
+            self.configPath = self.ui.searchAS1Input.text()
+        elif type == 'useCustomConfig':
+            with open('config.json', 'r') as file:
+                config = json.load(file)
+
+            if self.useCustomConfig == True:
+                self.ui.useCCBtn.setText("Use Custom Config")
+                self.ui.tab1_line2.setHidden(True)
+                self.ui.tab1_line3.setHidden(True)
+                self.ui.searchConfigInput.setText('')
+                self.ui.searchAS1Input.setText('')
+                self.useCustomConfig = False
+            elif self.useCustomConfig == False:
+                self.ui.useCCBtn.setText("Don't Use Custom Config")
+                self.ui.tab1_line2.setHidden(False)
+                self.ui.tab1_line3.setHidden(False)
+                self.ui.searchConfigInput.setText(config['general'][0]['configFile'])
+                self.ui.searchAS1Input.setText(config['general'][0]['configPath'])
+                self.useCustomConfig = True
     
     def saveConfig(self):
-        toirExeError = True
-        configFileError = True
         with open('config.json', 'r') as file:
             config = json.load(file)
         
         if self.toirExe != '' and self.toirExe != None:
             if ".exe" in self.toirExe:
-                config['general'][0]['toirExe'] = self.toirExe
                 toirExeError = False
+                config['general'][0]['toirExe'] = self.toirExe
             else:
                 toirExeError = True
-                self.ui.searchFileInput.setText("")
+                self.ui.searchFileInput.setText('')
+        else:
+            toirExeError = False
+        
         if self.configFile != '' and self.configFile != None:
             if '.ini' in self.configFile:
-                config['general'][0]['configFile'] = self.configFile
                 configFileError = False
+                config['general'][0]['configFile'] = self.configFile
             else:
                 configFileError = True
-                self.ui.searchConfigInput.setText("")
+                self.ui.searchConfigInput.setText('')
+        else:
+            configFileError = False
         
+        if self.configPath != '' and self.configPath != None:
+            if p.isfile(self.configPath+'\\info.dat'):
+                configPathError = False
+                config['general'][0]['configPath'] = self.configPath
+            else:
+                configPathError = True
+                self.ui.searchAS1Input.setText('')
+        else:
+            configPathError = False
+        
+        if self.useCustomConfig == False:
+            configFileError = False
+            configPathError = False
+
+        if configFileError == False and configPathError == False:
+            config['general'][0]['useCustomConfig'] = self.useCustomConfig
+
         with open('config.json', 'w') as file:
             json.dump(config, file, indent=4)
         
-        # if toirExeError == True:
-        #     toirExeError_msg = '• Toir executable: Select an EXE file\n'
-        # else:
-        #     toirExeError_msg = ''
-        # if configFileError == True:
-        #     configFileError_msg = '• Custom config file: Select a Toir configuration INI file\n'
-        # else:
-        #     configFileError_msg = ''
-        
-        if toirExeError == True or configFileError == True:
-            # error_msg = f'{toirExeError_msg}{configFileError_msg}'
-            # easygui.codebox(title='Error!', msg='Some settings have not been changed.', text=error_msg)
+        if toirExeError == True or configFileError == True or configPathError == True:
             if toirExeError == True:
                 self.ui.searchFileInput.setPlaceholderText('Select an EXE file!!!!!')
             if configFileError == True:
                 self.ui.searchConfigInput.setPlaceholderText('Select a Toir configuration INI file!!!!!')
+            if configPathError == True:
+                self.ui.searchAS1Input.setPlaceholderText('Select the correct toir config folder!!!!!')
         else:
-            self.ui.saveBtn.clicked.connect(self.close)
+            self.close()
+            

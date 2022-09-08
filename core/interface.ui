@@ -24,6 +24,7 @@
   </property>
   <property name="font">
    <font>
+    <pointsize>24</pointsize>
     <weight>50</weight>
     <bold>false</bold>
    </font>
@@ -48,31 +49,35 @@
 }
 
 #loadBtn {
-	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));
-	border-radius: 5px;
-	color: #212121;
-}
-#loadBtn:hover {
-	background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));
-	border: 2px solid #d400ff;
+	background-color: #212121;
 	color: #d400ff;
+	border: 2px solid #d400ff;
+	border-radius: 5px;
 }
+
+#loadBtn:hover {
+	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));
+	color: #ffffff;
+	border: 2px solid #ffffff;
+}
+
 #loadBtn:pressed {
 	background-color: #212121;
-	border: 2px solid #d400ff;
-	color: #d400ff;
+	color: #313131;
+	border: 2px solid #313131;
 }
 
 #footer QPushButton {
-	color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));
-	background-color: #212121;
+	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));
+	color: #212121;
 	border-radius: 18px;
 }
 #footer QPushButton:hover {
-	color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(212, 212, 212, 255));
-	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));
+	color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.511, y2:1, stop:0 rgba(212, 0, 255, 255), stop:1 rgba(155, 0, 194, 255));
+	background-color: #ffffff;
 }
 #footer QPushButton:pressed {
+	background-color: #313131;
 	color: #212121;
 }
 
