@@ -25,7 +25,7 @@ class GeneralConfig():
             self.type = 'configPath'
             self.titleType = 'the Toir config folder'
         
-        filePath = easygui.diropenbox(title=f'Select {self.titleType}')
+        filePath = easygui.diropenbox(title=f'Select {self.titleType}') + '\\'
 
         if filePath == None:
             filePath = ''

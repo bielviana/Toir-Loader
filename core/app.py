@@ -1,4 +1,3 @@
-from genericpath import isfile
 from PySide2 import *
 from core.ui_interface import *
 from core.ui_config import *
@@ -8,7 +7,6 @@ from classes.toir import *
 from classes.config import *
 from os import path as p
 import json
-import easygui
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -45,6 +43,15 @@ class MainWindow(QMainWindow):
         self.ui.ttBtn.clicked.connect(lambda: self.socialLinks.openLink('twitter'))
         self.ui.gitBtn.clicked.connect(lambda: self.socialLinks.openLink('github'))
         self.ui.ppBtn.clicked.connect(lambda: self.socialLinks.openLink('paypal'))
+
+    def CloseToir(self):
+        with open('config.json', 'r') as file:
+            config2 = json.load(file)
+        loader_exe_path = config2['general'][0]['toirExe'].split('\\')
+        
+        for file in loader_exe_path:
+            if '.EXE' in file or '.exe' in file:
+                sp.Popen(f'TASKKILL /IM {file} /F /T', shell=True, stdout=sp.PIPE).stdout.read()
 
 class ConfigWindow(QMainWindow):
     def __init__(self):
