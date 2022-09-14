@@ -7,4 +7,4 @@ if __name__ == '__main__':
     try:
         sys.exit(app.exec_())
     finally:
-        window.CloseToir()
+        window.closeToir()

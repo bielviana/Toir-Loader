@@ -1,1 +1,2 @@
-pyinstaller --noconfirm --onefile --windowed --icon "C:/Users/katio/Desktop/Toir-Loader/resources/images/icon.ico" --name "Toir Loader" --add-data "C:/Users/katio/Desktop/Toir-Loader/resources;resources/" --paths C:\Users\katio\Desktop\Toir-Loader\venv\Lib\site-packages  main.py
+pyinstaller --noconfirm --onefile --windowed --icon "C:/Users/katio/Desktop/Toir-Loader/resources/images/icon.ico" --name "Toir Loader" --add-data "C:/Users/katio/Desktop/Toir-Loader/resources;resources/" main.py
+pause

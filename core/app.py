@@ -1,7 +1,5 @@
-from PySide2 import *
 from core.ui_interface import *
 from core.ui_config import *
-from Custom_Widgets.Widgets import *
 from classes.socialLinks import *
 from classes.toir import *
 from classes.config import *
@@ -19,8 +17,6 @@ class MainWindow(QMainWindow):
         })
         self.show()
 
-        self.configWindow = ConfigWindow()
-
         if p.isfile('config.json') == False:
             with open ('config.json', 'w') as file:
                 config = {}
@@ -28,10 +24,11 @@ class MainWindow(QMainWindow):
                 config['general'][0] = {"toirExe": "", "useCustomConfig": False, "configFile": "", "configPath": ""}
                 config['profiles'] = []
                 json.dump(config, file, indent=4)
+            self.configWindow = ConfigWindow()
             self.configWindow.show()
 
         # EVENT TO OPEN THE CONFIG WINDOW
-        self.ui.configBtn.clicked.connect(self.configWindow.show)
+        self.ui.configBtn.clicked.connect(self.openConfigWindow)
                 
         # EVENT TO LOAD THE TOIR INFINITY/ALPHA
         self.toir = Toir()
@@ -44,7 +41,13 @@ class MainWindow(QMainWindow):
         self.ui.gitBtn.clicked.connect(lambda: self.socialLinks.openLink('github'))
         self.ui.ppBtn.clicked.connect(lambda: self.socialLinks.openLink('paypal'))
 
-    def CloseToir(self):
+        self.ui.closeBtn.clicked.connect(self.closeToir)
+
+    def openConfigWindow(self):
+        self.configWindow = ConfigWindow()
+        self.configWindow.show()
+
+    def closeToir(self):
         with open('config.json', 'r') as file:
             config2 = json.load(file)
         loader_exe_path = config2['general'][0]['toirExe'].split('\\')

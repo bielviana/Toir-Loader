@@ -1,0 +1,141 @@
+{
+ "version": "auto-py-to-exe-configuration_v1",
+ "pyinstallerOptions": [
+  {
+   "optionDest": "noconfirm",
+   "value": true
+  },
+  {
+   "optionDest": "filenames",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/main.py"
+  },
+  {
+   "optionDest": "onefile",
+   "value": true
+  },
+  {
+   "optionDest": "console",
+   "value": false
+  },
+  {
+   "optionDest": "icon_file",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/icon.ico"
+  },
+  {
+   "optionDest": "name",
+   "value": "Toir Loader"
+  },
+  {
+   "optionDest": "ascii",
+   "value": false
+  },
+  {
+   "optionDest": "clean_build",
+   "value": true
+  },
+  {
+   "optionDest": "key",
+   "value": "0610biel2K14."
+  },
+  {
+   "optionDest": "strip",
+   "value": false
+  },
+  {
+   "optionDest": "noupx",
+   "value": false
+  },
+  {
+   "optionDest": "disable_windowed_traceback",
+   "value": false
+  },
+  {
+   "optionDest": "embed_manifest",
+   "value": true
+  },
+  {
+   "optionDest": "uac_admin",
+   "value": true
+  },
+  {
+   "optionDest": "uac_uiaccess",
+   "value": false
+  },
+  {
+   "optionDest": "win_private_assemblies",
+   "value": false
+  },
+  {
+   "optionDest": "win_no_prefer_redirects",
+   "value": false
+  },
+  {
+   "optionDest": "bootloader_ignore_signals",
+   "value": false
+  },
+  {
+   "optionDest": "argv_emulation",
+   "value": false
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/purpleIcons/x.svg;resources/images/purpleIcons"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/purpleIcons/search.svg;resources/images/purpleIcons"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/purpleIcons/settings.svg;resources/images/purpleIcons"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/whiteIcons/x.svg;resources/images/whiteIcons"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/whiteIcons/search.svg;resources/images/whiteIcons"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/whiteIcons/settings.svg;resources/images/whiteIcons"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/configShadow.png;resources/images"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/purpleIcons/minimize-2.svg;resources/images/purpleIcons"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/whiteIcons/minimize-2.svg;resources/images/whiteIcons"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/shadow.png;resources/images"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/icon.png;resources/images"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/images/icon.ico;resources/images"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/ui_config.json;resources"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/katio/Desktop/Toir-Loader/resources/ui_interface.json;resources"
+  }
+ ],
+ "nonPyinstallerOptions": {
+  "increaseRecursionLimit": true,
+  "manualArguments": ""
+ }
+}

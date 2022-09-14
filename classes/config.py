@@ -1,4 +1,3 @@
-from Custom_Widgets.Widgets import *
 import easygui
 
 class GeneralConfig():

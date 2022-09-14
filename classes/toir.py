@@ -7,13 +7,15 @@ from time import sleep
 
 class Toir():
     def __init__(self):
+        pass
+
+    def load(self):
         with open('config.json', 'r') as file:
             config = json.load(file)
         self.toirExePath = config['general'][0]['toirExe']
         self.toirConfigFile = config['general'][0]['configFile']
         self.toirConfigPath = config['general'][0]['configPath']
 
-    def load(self):
         thToir = ThToir(1, self.toirExePath)
         thToir.start()
 
