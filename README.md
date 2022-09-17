@@ -26,6 +26,7 @@ It's simple but very useful, as it doesn't have all the manual and repetitive wo
 # Dependencies (for devs only)
 1. Python 3.7.9 (Foi a versão que utilizei, não testei em outras)
 
-2. `pip install -r requirements.txt`
+2. Open the command prompt in the repository folder and install the necessary libraries.
+```   pip install -r requirements.txt```
 
 3. External dependency: [GTK+ for Windows Runtime Environment](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer)
