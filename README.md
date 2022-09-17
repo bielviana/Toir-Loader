@@ -28,7 +28,7 @@ It's simple but very useful, as it doesn't have all the manual and repetitive wo
 
 2. Open the command prompt in the repository folder and install the necessary libraries.
 ```
-pip install -r requirements.txt
+   pip install -r requirements.txt
 ```
 
 3. External dependency: [GTK+ for Windows Runtime Environment](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer)
