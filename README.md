@@ -32,3 +32,5 @@ It's simple but very useful, as it doesn't have all the manual and repetitive wo
 ```
 
 3. External dependency: [GTK+ for Windows Runtime Environment](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer)
+
+4. Install the `Social Media Circled.otf` font located in the `resources\fonts` folder
