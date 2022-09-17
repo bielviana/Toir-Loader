@@ -13,12 +13,12 @@ It's simple but very useful, as it doesn't have all the manual and repetitive wo
 
 4. In the 2nd fields you must select the configuration file you want to use.
 ```
-#   I recommend that before that, create a folder inside the root folder of Toir Loader and save
-#   your profiles inside it, for the sake of organization.
+   I recommend that before that, create a folder inside the root folder of Toir Loader and save
+   your profiles inside it, for the sake of organization.
 ```
 5. In the 3rd and last field, select the Toir configuration folder, usually located in a path similar to the example below:
 ```
-#   C:\Program Files\AS1\DDD861CA26FE5F5F9F4BD2A165A82B2E\config`
+   C:\Program Files\AS1\DDD861CA26FE5F5F9F4BD2A165A82B2E\config`
 ```
 6. Now just leave the Toir Loader open and, whenever you start a game, just click on the "LOAD" button and the application will do everything else.
 ㅤ
